@@ -1,0 +1,50 @@
+<div ng-cloak ng-controller="lights" data-ng-init="init()">
+    <div class="row" style="padding-top:40px;">
+        <div class="col-sm-2">
+            <div class="card" style="width:200px;">
+                <paper-ripple class="recenteringTouch" fit style="padding:60px;padding-left:100px;">
+                    <div style="padding-left:30px;padding-right:30px;">
+                        <p><span class="infoLabel">Turn off lights</span>
+                            <div class="button raised red" ng-click="params.switchLights()">
+                                <div class="center" fit>Turn off</div>
+                                <paper-ripple fit></paper-ripple>
+                            </div>
+                        </p>
+                        <p><span class="infoLabel">Turn on lights</span>
+                            <div class="button raised green" ng-click="params.switchLightsOn()">
+                                <div class="center" fit>Turn on</div>
+                                <paper-ripple fit></paper-ripple>
+                            </div>
+                        </p>
+                    </div>
+                </paper-ripple>
+            </div>
+        </div>
+        <div class="col-sm-4" style="margin-left:50px;">
+            <div class="card">
+                <div style="padding-left:30px;padding-top:30px;padding-right:30px;">
+                    <p><span class="infoLabel">State</span></p>
+                </div>
+                <ul>
+                    <li ng-repeat="light in params.lights" ng-click="params.switchSingleLight(light.Light,light.On)">
+                        {{light.Light}} - {{light.On}} 
+                        <span ng-show="light.On === 'off'" style="margin-right:50px;float:right;" class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                        <span ng-show="light.On === 'on'" style="margin-right:50px;float:right;" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4" style="margin-left:50px;">
+            <div class="card"  style="height:400px;">
+                <div style="padding-left:30px;padding-top:30px;">
+                    <p><span class="infoLabel">Output</span></p>
+                </div>
+                <ul>
+                    <li ng-repeat="task in params.tasks">
+                        <span style="font-size:15px">{{task.task}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

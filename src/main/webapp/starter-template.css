@@ -1,0 +1,427 @@
+body {
+  padding-top: 50px;  
+}
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Source Sans Pro', sans-serif;*/
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.infoLabel{
+    font-family: 'Raleway', sans-serif;
+    font-size:18px;
+    /*color:*/
+}
+.navbar-inverse{
+    background-color: #616161;
+}
+.container1 {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-width: 100%;
+  max-height:400px;
+  padding-top: 20px;
+}
+
+.detailsInvoice:hover{
+    background-color: #ffcc99;
+}
+
+
+table tr:nth-child(odd) {
+    background-color: white;
+}
+table tr:nth-child(even) {
+    background-color: #ffe0b3;
+}
+
+table tr:hover, tr.selected {
+    background-color: #FF9800;
+    color: white;
+}
+
+.selected {
+    background-color: #FF9800 !important;
+    color: white;
+}
+
+table tr{
+    height:30px;
+}
+
+table {
+    width:100%;
+}
+
+table td{
+    font-size:12px;
+    padding: 5px 10px;
+    color: #727272;
+    word-wrap: break-word;
+}
+
+table th{
+    padding: 0px 10px !important;
+    background-color:#616161;
+    color: white;    
+}
+
+
+
+
+
+
+.dropdown{
+    padding:10px 10px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+    float:right;
+    color: #FF6600;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.btn-primary{
+    background-color: transparent;
+    border-color: #FF6600;
+}
+
+.btn-primary.focus, .btn-primary:focus, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus{
+    background-color: #FF6600;
+    border-color: #FF6600;
+}
+
+.open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover{
+    background-color: #FF6600;
+    border-color: #FF6600;
+}
+.open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover{
+    background-color: #FF6600;
+    border-color: #FF6600;
+}
+
+.group               { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input                 {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  color:white;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid white;
+  background-color: #616161;
+}
+input:focus         { outline:none; }
+
+/* LABEL ======================================= */
+label                  {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label         {
+  top:-20px;
+  font-size:14px;
+  color:#FF6600;
+}
+
+/* BOTTOM BARS ================================= */
+.bar     { position:relative; display:block; width:300px; }
+.bar:before, .bar:after     {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#FF6600; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#AFB42B; }
+  to     { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#AFB42B; }
+  to     { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#AFB42B; }
+  to     { width:0; background:transparent; }
+}
+
+
+
+    body {
+      background-color: #f9f9f9;
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+    }
+    
+    section {
+      padding: 30px 25px;
+    }
+    
+    section > * {
+      margin: 10px
+    }
+    
+    /* Button */
+    .button {
+      display: inline-block;
+      position: relative;
+      width: 120px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 0.9em;
+      background-color: #fff;
+      color: #646464;
+    }
+    
+    .button > paper-ripple {
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .button.narrow {
+      width: 60px;
+    }
+    
+    .button.grey {
+      background-color: #eee;
+    }
+    
+    .button.blue {
+      background-color: #4285f4;
+      color: #fff;
+    }
+    .button.red {
+      background-color: #D32F2F;
+      color: #fff;
+    }
+    
+    .button.green {
+      background-color: #0f9d58;
+      color: #fff;
+    }
+    
+    .button.raised {
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+    
+    .button.raised:active {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      transition-delay: 0s;
+    }
+    
+    /* Icon Button */
+    .icon-button {
+      position: relative;
+      display: inline-block;
+      width: 56px;
+      height: 56px;
+    }
+    
+    .icon-button > core-icon {
+      margin: 16px;
+      transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .icon-button:hover > core-icon {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    
+    .icon-button > paper-ripple {
+      overflow: hidden;
+      color: #646464;
+    }
+    
+    .icon-button.red > core-icon::shadow path {
+      fill: #db4437;
+    }
+    
+    .icon-button.red > paper-ripple {
+      color: #db4437;
+    }
+    
+    .icon-button.blue > core-icon::shadow path {
+      fill: #4285f4;
+    }
+    
+    .icon-button.blue > paper-ripple {
+      color: #4285f4;
+    }
+    
+    /* FAB */
+    .fab {
+      position: relative;
+      display: inline-block;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      color: #fff;
+      overflow: hidden;
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+    
+    .fab.red {
+      background-color: #d23f31;
+    }
+    
+    .fab.blue {
+      background-color: #4285f4;
+    }
+    
+    .fab.green {
+      background-color: #0f9d58;
+    }
+    
+    .fab:active {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      transition-delay: 0s;
+    }
+    
+    .fab > core-icon {
+      margin: 16px;
+    }
+    
+    .fab > core-icon::shadow path {
+      fill: #fff;
+    }
+    
+    /* Menu */
+    .menu {
+      display: inline-block;
+      width: 180px;
+      background-color: #fff;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .item {
+      position: relative;
+      height: 48px;
+      line-height: 48px;
+      color: #646464;
+      font-size: 0.9em;
+    }
+    
+    .menu.blue > .item {
+      color: #4285f4;
+    }
+    
+    /* Card, Dialog */
+    .card, .dialog {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 240px;
+      /*vertical-align: top;*/
+      background-color: #fff;
+      box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    }
+    
+    .dialog {
+      vertical-align: top;      
+    }
+    
+    .dialog {
+      box-sizing: border-box;
+      padding: 16px;
+    }
+    
+    .dialog > .content {
+      height: 170px;
+      font-size: 0.9em;
+    }
+    
+    .dialog > .content > .title {
+      font-size: 1.3em;
+    }
+    
+    .dialog > .button {
+      width: 90px;
+      float: right;
+    }
+    
+    .card.image {
+      background: url(http://lorempixel.com/300/240/nature/);
+      color: #fff;
+    }
+    
+    /* Misc */
+    .center {
+      text-align: center;
+    }
+    
+    .label {
+      padding: 0 16px;
+    }
+    
+    .label-blue {
+      color: #4285f4; 
+    }
+    
+    .label-red {
+      color: #d23f31; 
+    }
+    
+    
+    
+ 
